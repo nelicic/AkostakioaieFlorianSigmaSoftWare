@@ -9,7 +9,6 @@ Buy purchase1 = new Buy();
 purchase1.AddToCart(prod1, 3);
 purchase1.AddToCart(prod2, 5);
 purchase1.AddToCart(prod3, 8);
-
 Check.PrintCheck(purchase1);
 
 Buy purchase2 = new Buy();

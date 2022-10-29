@@ -98,6 +98,9 @@ namespace HomeWork3
             }
         }
 
+        public void SortByPrice() => Array.Sort(products);
+        public void SortByWeight() => Array.Sort(products, new ProductComparer());
+
         public void Display()
         {
             Console.WriteLine();

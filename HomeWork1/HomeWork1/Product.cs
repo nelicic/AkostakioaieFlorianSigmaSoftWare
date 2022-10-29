@@ -1,10 +1,15 @@
 ﻿namespace HomeWork1
 {
-    public class Product
+    public class Product : IComparable
     {
-        private string name = String.Empty;
+        private string name = string.Empty;
         private double weight;
         public double Price { get; set; }
+        public double Weight 
+        { 
+            get => weight; 
+            private set => weight = value; 
+        }
 
         public Product()
         { }
@@ -41,6 +46,19 @@
             return (name == item.name && 
                 weight == item.weight && 
                 Price == item.Price);
+        }
+
+        public int CompareTo(object? obj)
+        {
+            Product product = obj as Product;
+            if (product == null)
+                throw new ArgumentException();
+
+            if (Price > product.Price)
+                return 1;
+            else if (Price < product.Price)
+                return -1;
+            return 0;
         }
     }
 }

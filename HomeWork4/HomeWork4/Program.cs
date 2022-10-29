@@ -6,5 +6,5 @@ number.Frequency();
 Console.WriteLine();
 
 Console.WriteLine(number);
-number.GetSequences(3);
+number.GetSequences(3); // input number of sequences
 

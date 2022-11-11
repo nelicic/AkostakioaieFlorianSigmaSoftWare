@@ -9,6 +9,7 @@ namespace HomeWork2
     public class Cube
     {
         // vector with 6 matrix
+        // прокоментуйте на занятті про int[,,]
         private readonly int [][,] data;
         private readonly int k;
         private readonly int n;

@@ -51,7 +51,7 @@ namespace HomeWork2
             int k = 1;
             int i = 0;
             for (int j = 0; j < m; j++)
-            {
+            {//Можна зменшити кількість умов
                 if (i == 0)
                     while (i < n)
                     {
@@ -68,7 +68,7 @@ namespace HomeWork2
         }
 
         private void DiagonalInitialization()
-        {
+        {// теж можна оптимізувати
             int k = 1;
             int i = 0, j = 0;
             
@@ -192,5 +192,5 @@ namespace HomeWork2
             return sb.ToString();
         }
     }
-
+//Але все дуже структуризовано! Молодець!
 }

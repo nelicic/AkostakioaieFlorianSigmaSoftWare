@@ -9,6 +9,7 @@ namespace HomeWork2
     class Tensor
     {
         private double[] variable;
+        // порушення інкапсуляції. Хоча напрям думок добрий.
         public int[] Shape { get; set; }
         
         public int Elements

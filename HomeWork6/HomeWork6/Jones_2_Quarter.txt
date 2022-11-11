@@ -1,0 +1,6 @@
+Appartment 18 | Owner Jones
+April		May			June		
+01.04.2022	01.05.2022	01.06.2022	
+0Kv			254.1Kv		172.3Kv		
+$0.00		$355.74		$241.22		
+

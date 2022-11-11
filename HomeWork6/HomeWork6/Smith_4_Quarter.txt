@@ -1,0 +1,6 @@
+Appartment 37 | Owner Smith
+October		November	
+01.10.2022	01.11.2022	
+148.5Kv		193.4Kv		
+$207.90		$270.76		
+

@@ -1,0 +1,30 @@
+Appartment 37 | Owner Smith
+July		August		September		
+01.07.2022	01.08.2022	01.09.2022	
+193.4Kv		301.1Kv		301.2Kv		
+$270.76		$421.54		$421.68		
+
+Appartment 18 | Owner Jones
+July		August		September		
+01.07.2022	01.08.2022	01.09.2022	
+112.4Kv		241.1Kv		0Kv			
+$157.36		$337.54		$0.00		
+
+Appartment 19 | Owner Williams
+July		August		September		
+01.07.2022	01.08.2022	01.09.2022	
+129Kv		206.3Kv		134.1Kv		
+$180.60		$288.82		$187.74		
+
+Appartment 4 | Owner Brown
+July		August		September		
+01.07.2022	01.08.2022	01.09.2022	
+23.4Kv		521.3Kv		241.4Kv		
+$32.76		$729.82		$337.96		
+
+Appartment 91 | Owner Joe
+July		August		September		
+01.07.2022	01.08.2022	01.09.2022	
+313.1Kv		141.7Kv		124.2Kv		
+$438.34		$198.38		$173.88		
+

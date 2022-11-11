@@ -1,0 +1,30 @@
+Appartment 37 | Owner Smith
+October		November	
+01.10.2022	01.11.2022	
+148.5Kv		193.4Kv		
+$207.90		$270.76		
+
+Appartment 18 | Owner Jones
+October		November	
+01.10.2022	01.11.2022	
+0Kv			0Kv			
+$0.00		$0.00		
+
+Appartment 19 | Owner Williams
+October		November	
+01.10.2022	01.11.2022	
+219.2Kv		512.4Kv		
+$306.88		$717.36		
+
+Appartment 4 | Owner Brown
+October		November	
+01.10.2022	01.11.2022	
+51.1Kv		193Kv		
+$71.54		$270.20		
+
+Appartment 91 | Owner Joe
+October		November	
+01.10.2022	01.11.2022	
+514.1Kv		193.4Kv		
+$719.74		$270.76		
+

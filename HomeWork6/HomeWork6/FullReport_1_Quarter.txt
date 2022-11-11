@@ -1,0 +1,30 @@
+Appartment 37 | Owner Smith
+January		February	March		
+01.01.2022	01.02.2022	01.03.2022	
+331Kv		148.5Kv		193.4Kv		
+$463.40		$207.90		$270.76		
+
+Appartment 18 | Owner Jones
+January		February	March		
+01.01.2022	01.02.2022	01.03.2022	
+0Kv			0Kv			0Kv			
+$0.00		$0.00		$0.00		
+
+Appartment 19 | Owner Williams
+January		February	March		
+01.01.2022	01.02.2022	01.03.2022	
+182Kv		512Kv		237.4Kv		
+$254.80		$716.80		$332.36		
+
+Appartment 4 | Owner Brown
+January		February	March		
+01.01.2022	01.02.2022	01.03.2022	
+341.4Kv		148Kv		268.4Kv		
+$477.96		$207.20		$375.76		
+
+Appartment 91 | Owner Joe
+January		February	March		
+01.01.2022	01.02.2022	01.03.2022	
+0Kv			0Kv			0Kv			
+$0.00		$0.00		$0.00		
+

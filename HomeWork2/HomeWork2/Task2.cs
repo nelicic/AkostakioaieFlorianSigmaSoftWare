@@ -26,6 +26,11 @@ namespace HomeWork2
             matrix[3, 3] = ConsoleColor.DarkRed;
             matrix[3, 4] = ConsoleColor.DarkRed;
             matrix[3, 5] = ConsoleColor.DarkRed;
+
+            matrix[4, 3] = ConsoleColor.Yellow;
+            matrix[4, 4] = ConsoleColor.Yellow;
+            matrix[4, 5] = ConsoleColor.Yellow;
+            //matrix[4, 6] = ConsoleColor.Yellow;
         }
 
         public void Display()
@@ -84,7 +89,6 @@ namespace HomeWork2
             Console.WriteLine("End index: " + j_end_res);
             Console.WriteLine("Length: " + length);
             Console.WriteLine("Line: " + line_res);
-
         }
     }
 

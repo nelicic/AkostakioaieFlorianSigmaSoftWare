@@ -13,9 +13,9 @@ array = new MyArray(6, 6, SnakeType.SpiralSnkake);
 Console.WriteLine("SpiralSnake");
 Console.WriteLine(array);*/
 
-/*// Task2
+// Task2
 MatrixRGB matrix = new MatrixRGB();
-matrix.Display();*/
+matrix.Display();
 
 /*// Task3
 // Cube v1, a vector with 6 matrix
@@ -34,10 +34,10 @@ cube.Display(AxisEnum.Z);*/
 
 
 // Task4
-Tensor a = new Tensor(2, 3, 2, 3);
+/*Tensor a = new Tensor(2, 3, 2, 3);
 a.Fill(4);
 a.Print();
 
 a = new Tensor(4, 2);
 a.Fill(2);
-a.Print();
+a.Print();*/

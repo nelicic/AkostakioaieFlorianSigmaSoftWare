@@ -58,7 +58,7 @@ namespace HomeWork4
                 for (int i = final; k <= max; k++, i--)
                     primary[i] = false;
             }
-
+// тут теж порушення принципів SOLID. У цьому методі не треба видруковувати
             for (int i = 0; i < primary.Length; i++)
             {
                 if (sequences.ContainsKey(i))
@@ -74,7 +74,7 @@ namespace HomeWork4
         }
 
         private static bool IsPrimary(int n)
-        {
+        {// Прості числа визначено дуже не оптимально!!!
             for (int i = 2; i < n; i++)
             {
                 if (n % i == 0 || n % 2 == 0)

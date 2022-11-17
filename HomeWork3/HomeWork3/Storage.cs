@@ -32,7 +32,7 @@ namespace HomeWork3
             DateOnly date;
 
             for (int i = 0; i < products.Length; ++i)
-            {
+            {// З цього класу слід прибрати все, що пов'язане з друком на консолі!!! Це модельний клас.
                 Console.WriteLine("What type of product do you want to add? " + nameof(DairyProduct) + " or " + nameof(Meat));
                 str = Console.ReadLine() ?? "Dairy";
                 if (str.ToLower() == "dairy")

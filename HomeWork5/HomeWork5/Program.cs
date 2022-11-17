@@ -1,5 +1,5 @@
 ﻿using HomeWork5;
-
+//Ваші бали 90	140	85	90	90
 // Homework1
 Meat prod1 = new Meat("Mutton", 200, 1500, Quality.HighQuality, MeatType.Mutton);
 Meat prod2 = new Meat("Mutton", 200, 1500, Quality.HighQuality, MeatType.Mutton);

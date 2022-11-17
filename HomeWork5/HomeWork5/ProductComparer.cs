@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HomeWork5
-{
+{// тут вже бачу порівняння
     public class ProductComparer : IComparer<Product>
     {
         public int Compare(Product? x, Product? y)

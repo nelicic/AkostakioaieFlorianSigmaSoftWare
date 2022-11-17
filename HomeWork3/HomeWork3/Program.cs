@@ -1,7 +1,7 @@
 ﻿using HomeWork1;
 using HomeWork3;
 
-
+// Не бачу класу, який реалізізує IComperer
 // Homework3
 Product[] products = new Product[5];
 products[0] = new DairyProduct("Milk", 40, 400, new DateOnly(2022, 11, 4));

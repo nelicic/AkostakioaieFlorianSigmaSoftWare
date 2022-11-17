@@ -3,7 +3,7 @@
 namespace HomeWork5
 {
     public class Cart
-    {
+    {// Для пошуку зручніше використовувати словники
         private List<Buy> products;
         public Cart() => products = new();
 
@@ -42,7 +42,7 @@ namespace HomeWork5
                     removeBuy = buy;
                 }
             }
-
+// якщо немає такої кількості, як задано, треба організовувати Exception.
             if (removeBuy.Amount <= 0)
                 products.Remove(removeBuy);
         }

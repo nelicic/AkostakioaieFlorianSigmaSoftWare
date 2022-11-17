@@ -1,14 +1,14 @@
 ﻿namespace HomeWork5
 {
     public class Storage
-    {
+    {//Чому залишили  масивом. Додавати та вилучати буде проблемно!!!
         private Product[] products;
 
         public Storage(params Product[] _products)
             => products = _products;
 
         public Product this[int id]
-        {
+        {// Що буде, якщо id не коректний?
             get => products[id];
             set => products[id] = value;
         }

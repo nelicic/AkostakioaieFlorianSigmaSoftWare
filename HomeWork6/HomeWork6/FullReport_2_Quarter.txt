@@ -1,29 +1,29 @@
 Appartment 37 | Owner Smith
-April		May			June		
+April		May		June		
 01.04.2022	01.05.2022	01.06.2022	
 253Kv		521.1Kv		148.5Kv		
 $354.20		$729.54		$207.90		
 
 Appartment 18 | Owner Jones
-April		May			June		
+April		May		June		
 01.04.2022	01.05.2022	01.06.2022	
-0Kv			254.1Kv		172.3Kv		
+0Kv		254.1Kv		172.3Kv		
 $0.00		$355.74		$241.22		
 
 Appartment 19 | Owner Williams
-April		May			June		
+April		May		June		
 01.04.2022	01.05.2022	01.06.2022	
 52.9Kv		211.1Kv		148.9Kv		
 $74.06		$295.54		$208.46		
 
 Appartment 4 | Owner Brown
-April		May			June		
+April		May		June		
 01.04.2022	01.05.2022	01.06.2022	
 30Kv		341Kv		222Kv		
 $42.00		$477.40		$310.80		
 
 Appartment 91 | Owner Joe
-April		May			June		
+April		May		June		
 01.04.2022	01.05.2022	01.06.2022	
 129Kv		133Kv		428Kv		
 $180.60		$186.20		$599.20		

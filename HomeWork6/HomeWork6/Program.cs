@@ -14,11 +14,12 @@ await Accountant.ReportFor("data.txt", 19, 3);
 await Accountant.ReportFor("data.txt", 37, 4);
 await Accountant.ReportFor("data.txt", 91, 5);
 
-/*List<int>? ids = Accountant.HaveNotUsedElectricityForQuarter("data.txt", 1);
-if (ids is not null)
-    foreach (var item in ids)
-        Console.WriteLine(item);*/
+await Accountant.GetDays("data.txt");
 
-/*Console.WriteLine(Accountant.GetDebtor("data.txt", 1));*/
+await Accountant.ElectricityNotUsed("data.txt", 1);
+await Accountant.ElectricityNotUsed("data.txt", 2);
+await Accountant.ElectricityNotUsed("data.txt", 3);
+await Accountant.ElectricityNotUsed("data.txt", 4);
+await Accountant.ElectricityNotUsed("data.txt", 5);
 
-Accountant.GetDays("data.txt");
+Console.WriteLine(Accountant.GetDebtor("data.txt", 1));

@@ -7,7 +7,7 @@ $270.76		$421.54		$421.68
 Appartment 18 | Owner Jones
 July		August		September		
 01.07.2022	01.08.2022	01.09.2022	
-112.4Kv		241.1Kv		0Kv			
+112.4Kv		241.1Kv		0Kv		
 $157.36		$337.54		$0.00		
 
 Appartment 19 | Owner Williams

@@ -38,8 +38,7 @@ namespace HomeWork6
                 sb.Append($"{dateTime.ToString("MMMM", CultureInfo.GetCultureInfo("en-en"))}\t");
                 if (dateTime.Month != 2 && dateTime.Month != 11)
                     sb.Append("\t");
-                if (dateTime.Month == 5)
-                    sb.Append("\t");
+                
             }
             sb.Append("\n");
             foreach (var item in Accounting)
@@ -51,8 +50,7 @@ namespace HomeWork6
             foreach (var item in Accounting)
             {
                 sb.Append($"{item.Value}Kv\t\t");
-                if (item.Value < 10)
-                    sb.Append("\t");
+                
             }
             sb.Append("\n");
             foreach (var item in Accounting)

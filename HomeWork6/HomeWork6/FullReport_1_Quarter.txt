@@ -7,7 +7,7 @@ $463.40		$207.90		$270.76
 Appartment 18 | Owner Jones
 January		February	March		
 01.01.2022	01.02.2022	01.03.2022	
-0Kv			0Kv			0Kv			
+0Kv		0Kv		0Kv		
 $0.00		$0.00		$0.00		
 
 Appartment 19 | Owner Williams
@@ -25,6 +25,6 @@ $477.96		$207.20		$375.76
 Appartment 91 | Owner Joe
 January		February	March		
 01.01.2022	01.02.2022	01.03.2022	
-0Kv			0Kv			0Kv			
+0Kv		0Kv		0Kv		
 $0.00		$0.00		$0.00		
 

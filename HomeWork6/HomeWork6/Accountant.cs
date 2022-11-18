@@ -4,7 +4,8 @@
     {
         private const string PATH = "E:\\C#\\SigmaSoftware\\HomeWork6\\HomeWork6\\";
 
-        public static async void GetDays(string path)
+        // 
+        public static async Task GetDays(string path)
         {
             List<string> data = File.ReadLines(PATH + path).ToList();
 
@@ -16,11 +17,13 @@
                     string[] stringDate = lineArray[lineArray.Length - 2].Split('.');
                     DateTime lastDate = new DateTime(int.Parse(stringDate[2]), int.Parse(stringDate[1]), int.Parse(stringDate[0]));
                     
-                    await writer.WriteLineAsync("Appartment " + lineArray[0] + " " + lineArray[1] + " Last time checked " + (DateTime.Now - lastDate).Days + " ago");
+                    await writer.WriteLineAsync("Appartment " + lineArray[0] + " " + lineArray[1] + " Last time checked " + (DateTime.Now - lastDate).Days + " days ago");
                 }
             }
         }
 
+        // Завдання "При відомій вартості кВт енергії знайти прізвище власника з найбільшою заборгованістю."
+        // Тому я не записував це в файл. Ну це було б трохи безглуздо отримати файл з одним прізвищем.
         public static string? GetDebtor(string path, int quarter)
         {
             if(quarter < 1 || quarter > 4)
@@ -46,9 +49,6 @@
 
         public static List<int>? HaveNotUsedElectricityForQuarter(string path, int quarter)
         {
-            if (quarter < 1 || quarter > 4)
-                return null;
-
             List<int> appartmentsId = new List<int>();
             List<string> data = File.ReadLines(PATH + path).ToList();
             Appartment appartment;
@@ -60,6 +60,26 @@
                     appartmentsId.Add(appartment.AppartmentId);
             }
             return appartmentsId;
+        }
+
+        public static async Task ElectricityNotUsed(string path, int quarter)
+        {
+            if (quarter < 1 || quarter > 4)
+                return;
+
+            List<int>? appartmentsId = HaveNotUsedElectricityForQuarter(path, quarter);
+
+            using (StreamWriter writer = new StreamWriter($"{PATH}Quarter_{quarter}_NoElectricity.txt", false))
+            {
+                if (appartmentsId == null || appartmentsId.Count == 0)
+                {
+                    await writer.WriteLineAsync("Every apartment have been used electricity");
+                    return;
+                }
+
+                foreach (var item in appartmentsId)
+                    await writer.WriteLineAsync(item.ToString());
+            }
         }
 
         public static async Task FullReport(string path, int quarter)

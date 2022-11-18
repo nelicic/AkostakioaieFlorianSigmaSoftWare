@@ -89,7 +89,6 @@ namespace HomeWork7
             return $"Name: {name}\nWeight: {weight.ToString("G29")} {weightMeasurement}\n" 
                 + string.Format(formatProvider, "Price: {0:c}", Math.Round(Price * currencyCoefficient, 2));
         }
-
         public override string ToString()
         {
             return $"Name: {name}\nWeight: {weight}\nPrice: {Price:c}\n";
@@ -110,7 +109,6 @@ namespace HomeWork7
                 Weight == item.Weight && 
                 Price == item.Price);
         }
-
         public int CompareTo(object? obj)
         {
             Product? product = obj as Product;

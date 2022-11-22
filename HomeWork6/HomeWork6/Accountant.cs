@@ -1,8 +1,8 @@
 ﻿namespace HomeWork6
-{
+{// пропоную усне обговорення архітектури.
     public static class Accountant
     {
-        private const string PATH = "E:\\C#\\SigmaSoftware\\HomeWork6\\HomeWork6\\";
+        private const string PATH = "E:\\C#\\SigmaSoftware\\HomeWork6\\HomeWork6\\";// В параметр за замовчуванням
 
         // 
         public static async Task GetDays(string path)

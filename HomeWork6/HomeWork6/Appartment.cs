@@ -13,6 +13,7 @@ namespace HomeWork6
         public int AppartmentId { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
+        //знову повторюєте помилку
         public Dictionary<DateOnly, decimal> Accounting { get; set; }
 
         public Appartment(int id, string lastName, string address)

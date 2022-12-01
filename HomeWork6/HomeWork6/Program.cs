@@ -3,23 +3,27 @@ using System.Globalization;
 
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
-await Accountant.FullReport("data.txt", 1);
-await Accountant.FullReport("data.txt", 2);
-await Accountant.FullReport("data.txt", 3);
-await Accountant.FullReport("data.txt", 4);
+Accountant accountant = new Accountant("E:\\C#\\SigmaSoftware\\HomeWork6\\HomeWork6\\data.txt");
 
-await Accountant.ReportFor("data.txt", 4, 1);
-await Accountant.ReportFor("data.txt", 18, 2);
-await Accountant.ReportFor("data.txt", 19, 3);
-await Accountant.ReportFor("data.txt", 37, 4);
-await Accountant.ReportFor("data.txt", 91, 5);
+await accountant.FullReport(1);
 
-await Accountant.GetDays("data.txt");
 
-await Accountant.ElectricityNotUsed("data.txt", 1);
-await Accountant.ElectricityNotUsed("data.txt", 2);
-await Accountant.ElectricityNotUsed("data.txt", 3);
-await Accountant.ElectricityNotUsed("data.txt", 4);
-await Accountant.ElectricityNotUsed("data.txt", 5);
+await accountant.FullReport(2);
+await accountant.FullReport(3);
+await accountant.FullReport(4);
 
-Console.WriteLine(Accountant.GetDebtor("data.txt", 1));
+await accountant.ReportFor(4, 1);
+await accountant.ReportFor(18, 2);
+await accountant.ReportFor(19, 3);
+await accountant.ReportFor(37, 4);
+await accountant.ReportFor(91, 5);
+
+await accountant.GetDays();
+
+await accountant.ElectricityNotUsed(1);
+await accountant.ElectricityNotUsed(2);
+await accountant.ElectricityNotUsed(3);
+await accountant.ElectricityNotUsed(4);
+await accountant.ElectricityNotUsed(5);
+
+Console.WriteLine(accountant.GetDebtor(1));

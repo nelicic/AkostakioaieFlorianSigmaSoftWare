@@ -1,0 +1,301 @@
+SOLID
+1.Single responsibility principle - Принцип єдиної забов'язаності. (SRP)
+Кожний клас/модуль/сутність повинені мати тільки одну операцію.
+Не потрібно мати God Object який має тисячу різних функцій/забов'язаностей, 
+це анти-патерн. Тому що у разі якщо прийдеться вносити зміни в цей класс, є дуже
+великий ризик що ви випадково задінете інші компоненти. Чим більший модуль/класс/сутність
+тим більше у нього залежностей.
+Цей принцип служить для того щоб розділяти це все на автономні компоненти, тим самим
+спрощувати внесення змін, в кожний з цих класів/модулів/сутностей.
+Приклад:
+- класс який логує
+- CRUD операції для бд
+- виконує роль моделі для класа Person
+Повністю порушує цей принцип.
+class GodObject
+{
+    public int Id;
+    public string Name;
+    public void Log(string message) { ... }
+    public void Create(Person obj) { ... }
+    public void Delete(int id) { ... }
+    public void Update(int id, Person obj) { ... }
+    public void GetAll() { ... }
+    public void Get(int id) { ... }
+}
+По нормальному потрібно б було зробити так:
+class Logger
+{
+    public void Log(string message) { ... }
+}
+
+class Person
+{
+    public int Id;
+    public string Name;
+}
+
+class DbContext
+{
+    public void Create(Person obj) { ... }
+    public void Delete(int id) { ... }
+    public void Update(int id, Person obj) { ... }
+    public void GetAll() { ... }
+    public void Get(int id) { ... }
+}
+Три класи які мають свої особисті задачі.
+
+---------------------------------------------------------
+2. Open-Closed Principle - Принцип відкритості/закритості (OCP)
+Програмні сутності/класи/модулі мають бути відкрить для розширення, але закриті для модифікації.
+Уявімо клас, який вже використовується в різних проєктах, якщо ми модифікуємо його методи то всі ці проєкти
+накриються, так робити не треба. Якщо ми хочемо щоб клас виконував більше операцій потрібно не міняти старі,
+а просто добавляти нові. Розширювати функціонал можна, а модифікувати ні.
+Цей принцип дозволяє уникати помилок в тих класах/модулях де поточний класс використовується.
+
+Приклад:
+У нас є класс Order в якому ми можемо отримати знижку.
+
+class Order
+{
+    public int GetDiscount(decimal price, Discount disc)
+    {
+        if (disc == Discount.discoun1)
+                return price - 10m;
+        else if (disc == Discount.discoun2)
+            return price - 20m;
+        return 0;
+    }
+}
+
+enum Discount
+{
+    discoun1,
+    discoun2
+}
+
+Але якщо ми захочемо додати ще третю знижку, прийдеться модифікувати класс Order, тим самим порушити принцип OCP.
+Щоб цього уникнути, потрібно створити або абстрактний класс або інтерфейс для Discount, і унаслідувати від нього
+всі інші знижки, тому в такій реалізації ми не порушуємо Open-Closed principle і можемо розширювати функціонал знижок 
+тим самим не модифікуючи існуючий клас Order.
+class Order
+{
+    public decimal GetDiscount(decimal price, IDiscount discount)
+        => discount.GetDiscount(price);
+}
+
+public interface IDiscount
+{
+    decimal GetDiscount(decimal price);
+}
+
+public class Discount1 : IDiscount
+{
+    public decimal GetDiscount(decimal price) => price - 10m;
+}
+
+public class Discount2 : IDiscount
+{
+    public decimal GetDiscount(decimal price) => price - 20m;
+}
+
+public class Discount3 : IDiscount
+{
+    public decimal GetDiscount(decimal price) => price - 30m;
+}
+
+---------------------------------------------------------
+3. Liskov Substitution - Принцип підстановки Барбари Лісков (LSP)
+Клас наслідник має виконувати ті самі задачі що й клас від якого він наслідується.
+У випадку коли клас наслідник не може виконувати ті самі дії які виконує батьківський класс
+виникає ризик появлення помилок. Результат методу класу наслідника може відрізнятися від результа
+методу батьківського класу, але в міру. Якщо різниця занадто велика значить порушується принцип LSP.
+Цей принцип використовується для забезпечення сталості, батьківський класс так класс наслідник можуть
+використовуватися так само без порушення роботи програми.
+
+Приклад:
+Ресторан, Stuff - батьківський класс для працівників закладу. Waiter - офіціант, і Manager.
+
+public abstract class Stuff
+{
+    public abstract void TakeOrder();
+    public abstract void Clean();
+}
+
+public class Waiter : Stuff
+{
+    public override void TakeOrder()
+        => Console.WriteLine("Take order");
+
+    public override void Clean()
+        => Console.WriteLine("Clean");
+}
+
+public class Manager : Stuff
+{
+    public override void Clean()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void TakeOrder()
+        => Console.WriteLine("Take order");
+}
+
+Тут порушується принцип, тому що якщо ми замінимо батьківський класс Stuff, менеджером, і ми використаємо метод Clean 
+програма викине виключну ситуацію. Хоча за принципом підстановки Лісков все мало б працювати. Виходить що цей принцип
+в даному прикладі порушується.
+
+Гарним рішенням було б створення інтерфейсу з методом Clean.
+Тепер не порушується принцип LSP.
+
+public abstract class Stuff
+{
+    public abstract void TakeOrder();
+}
+
+public interface ICleaner 
+{
+    void Clean();
+}
+
+public class Waiter : Stuff, ICleaner
+{
+    public override void TakeOrder()
+        => Console.WriteLine("Take order");
+
+    public void Clean()
+        => Console.WriteLine("Clean");
+}
+
+public class Manager : Stuff
+{
+    public override void TakeOrder()
+       => Console.WriteLine("Take order");
+}
+
+---------------------------------------------------------
+4. Interface Segregation - Принцип розділення інтерфейсів (ISP)
+Клас повинен виконувати лише ті функції які йому потрібні.
+Потрібно розділяти єдиний набір дій який має клас на маленькі набори інтерфейсів,
+для того щоб клас робив лише те що йому потрібно.
+
+public interface IPets
+{
+    bool IsFriendly();
+    void Bark(); 
+    void Eat();
+    void Fly();
+    void Walk();
+}
+
+public class Parrot : IPets
+{
+    public void Bark() { }  // useless
+    public void Eat() { }  
+    public void Fly() { }
+    public bool IsFriendly() => true;  // useless
+    public void Walk() { }  // useless
+}
+
+public class Dog : IPets
+{
+    public void Bark() { }
+    public void Eat() { }
+    public void Fly() { } // useless
+    public bool IsFriendly() => true;
+    public void Walk() { }
+}
+
+Порушено ISP, Потрібно розділити інтерфейс:
+
+public interface IFriend
+{
+    bool IsFriendly();
+}
+
+public interface IBark
+{
+    void Bark();
+}
+
+public interface IEat
+{
+    void Eat();
+}
+
+public interface IWalk
+{
+    void Walk();
+}
+
+public interface IFly
+{
+    void Fly();
+}
+
+public class Parrot : IEat, IFly
+{
+    public void Eat() { }  
+    public void Fly() { }
+}
+
+public class Dog : IBark, IEat, IFriend, IWalk
+{
+    public void Bark() { }
+    public void Eat() { }
+    public bool IsFriendly() => true;
+    public void Walk() { }
+}
+
+---------------------------------------------------------
+5. Dependency Inversion - Принцип інверсії залежностей (DIP)
+Модулі верхнього рівня не мають залежити від модулей нижнього рівня, все має залежити від абстракцій,
+Абстракції не мають залежити від деталей, це деталі мають залежити від абстракцій.
+
+На мою думку, дуже легко навести приклад Dependency Inversion через Dependency Injection, багато хто плутає ці 2 терміна. 
+Але по факту Dependency Injection працює за принципом Dependency Inversion.
+Коли ми добавляємо в контейнер якийсь сервіс:
+build.Services.AddScoped<ITimeService, TimeService>();
+
+Далі в класі-контролері через dependency injection ми отримуємо об'єкт класу TimeService через інтерфейс 
+ITimeService, (в конструкторі) наприклад
+
+public HomeController
+{
+    private ITimeService _time;
+
+    public HomeController(ITimeService time)
+    {
+        _time = time;
+    }
+}
+
+І далі через поле _time ми можемо користуватися сервісом TimeService, і навіть якщо він нам більше 
+не буде підходити ми зможемо створити TimeService2 який реалізує той самий інтрефейс ITimeService
+і просто поміняти в лоьавлені контейнера код на наступний: (добавити двійку)
+build.Services.AddScoped<ITimeService, TimeService2>();
+ 
+І все тепер ми будемо використовувати інший сервіс.
+Таким чином можна дуже легко продемонструвати Dependency inversion на прикладі Dependency injection. 
+Але багатьох це може заплутати, бо плутаються в термінах inversion-injection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

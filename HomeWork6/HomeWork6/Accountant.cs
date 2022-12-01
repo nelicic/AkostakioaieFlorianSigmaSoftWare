@@ -1,13 +1,14 @@
 ﻿namespace HomeWork6
 {// пропоную усне обговорення архітектури.
-    public static class Accountant
+    public class Accountant
     {
-        private const string PATH = "E:\\C#\\SigmaSoftware\\HomeWork6\\HomeWork6\\";// В параметр за замовчуванням
+        private readonly string PATH;
+        public Accountant(string path)
+            => PATH = path;
 
-        // 
-        public static async Task GetDays(string path)
+        public async Task GetDays()
         {
-            List<string> data = File.ReadLines(PATH + path).ToList();
+            List<string> data = File.ReadLines(PATH).ToList();
 
             using (StreamWriter writer = new StreamWriter($"{PATH}LastCheck.txt", false))
             {
@@ -24,14 +25,14 @@
 
         // Завдання "При відомій вартості кВт енергії знайти прізвище власника з найбільшою заборгованістю."
         // Тому я не записував це в файл. Ну це було б трохи безглуздо отримати файл з одним прізвищем.
-        public static string? GetDebtor(string path, int quarter)
+        public string? GetDebtor(int quarter)
         {
             if(quarter < 1 || quarter > 4)
                 return null;
 
             string lastName = string.Empty;
             decimal maxSum = 0;
-            List<string> data = File.ReadLines(PATH + path).ToList();
+            List<string> data = File.ReadLines(PATH).ToList();
             Appartment appartment;
 
             foreach (var line in data)
@@ -47,10 +48,10 @@
             return lastName;
         }
 
-        public static List<int>? HaveNotUsedElectricityForQuarter(string path, int quarter)
+        public List<int>? HaveNotUsedElectricityForQuarter(int quarter)
         {
             List<int> appartmentsId = new List<int>();
-            List<string> data = File.ReadLines(PATH + path).ToList();
+            List<string> data = File.ReadLines(PATH).ToList();
             Appartment appartment;
 
             foreach (var line in data)
@@ -62,12 +63,12 @@
             return appartmentsId;
         }
 
-        public static async Task ElectricityNotUsed(string path, int quarter)
+        public async Task ElectricityNotUsed(int quarter)
         {
             if (quarter < 1 || quarter > 4)
                 return;
 
-            List<int>? appartmentsId = HaveNotUsedElectricityForQuarter(path, quarter);
+            List<int>? appartmentsId = HaveNotUsedElectricityForQuarter(quarter);
 
             using (StreamWriter writer = new StreamWriter($"{PATH}Quarter_{quarter}_NoElectricity.txt", false))
             {
@@ -82,12 +83,12 @@
             }
         }
 
-        public static async Task FullReport(string path, int quarter)
+        public async Task FullReport(int quarter)
         {
             if (quarter < 1 || quarter > 4)
                 return;
 
-            List<string> data = File.ReadLines(PATH + path).ToList();
+            List<string> data = File.ReadLines(PATH).ToList();
             Appartment appartment;
 
             using (StreamWriter writer = new StreamWriter($"{PATH}FullReport_{quarter}_Quarter.txt", false))
@@ -101,12 +102,12 @@
             }
         }
 
-        public static async Task ReportFor(string path, int appartmentId, int quarter)
+        public async Task ReportFor(int appartmentId, int quarter)
         {
             if (quarter < 1 || quarter > 4)
                 return;
 
-            List<string> data = File.ReadLines(PATH + path).ToList();
+            List<string> data = File.ReadLines(PATH).ToList();
 
             foreach (var line in data)
             {
@@ -123,8 +124,7 @@
                 }
             }
         }
-
-        private static Appartment Parse(string line, int quarter)
+        private Appartment Parse(string line, int quarter)
         {
             string[] strAppartment = line.Split('|');
             Appartment appartment = new Appartment(int.Parse(strAppartment[0]), strAppartment[1], strAppartment[2]);

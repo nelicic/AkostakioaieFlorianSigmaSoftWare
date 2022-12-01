@@ -1,0 +1,4 @@
+﻿chair, couch, table, sofa, armchair
+carp, catfish, walleye, pike
+truck toy, drum, train, boat, teddy bear
+spoon, fork, knife

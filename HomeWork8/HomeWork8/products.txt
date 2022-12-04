@@ -1,17 +1,17 @@
 ﻿chair 149.99$ 22
 couch 230$ 12
-table 499.99$ 6
+table d9.99 6
 sofa 600$ 4
-armchair 320$ 8
+armchair 320 8
 carp 8$ 30
 catfish 7$ 34
 walleye 10$ 12
 pike 6$ 45
-truck toy 60$ 8
-drum 55$ 7
+trucktoy dfs dsf
+drum 55$ d
 train 110$ 3
 boat 30$ 9
-teddy bear 84.99$ 4
+teddybear 84.99$ 4
 spoon 2$ 55
 fork 2$ 55
 knife 5$ 100

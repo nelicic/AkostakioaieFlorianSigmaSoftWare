@@ -1,0 +1,4 @@
+﻿ATB chair 5
+ATB table 13
+EKVATOR catfish 10
+EKVATOR teddybear 31

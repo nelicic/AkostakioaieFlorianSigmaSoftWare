@@ -2,16 +2,19 @@
 {
     public class Storage
     {
-        private List<Product> products;
-
-        public void GetProducts(string path)
+        public readonly Dictionary<Product, int> products;
+        public Storage() => products = new Dictionary<Product, int>();
+        public Storage(Product product, int amount) : this() => Add(product, amount);
+        public Storage(Dictionary<Product, int> _products) => products = _products;
+        public void Add(Product prod, int amount) => products.Add(prod, amount);
+        public void Remove(Product prod) => products.Remove(prod);
+        public override string ToString()
         {
-            List<string> lines = File.ReadLines(path).ToList();
+            string str = string.Empty;
+            foreach (var product in products)
+                str += product.Key.ToString() + product.Value + "\n\n";
 
-            foreach (string line in lines)
-            {
-                products.Add(Product.TryParse(line));
-            }
+            return str;
         }
     }
 }

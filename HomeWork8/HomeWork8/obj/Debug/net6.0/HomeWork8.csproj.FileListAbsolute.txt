@@ -1,0 +1,15 @@
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\bin\Debug\net6.0\HomeWork8.exe
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\bin\Debug\net6.0\HomeWork8.deps.json
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\bin\Debug\net6.0\HomeWork8.runtimeconfig.json
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\bin\Debug\net6.0\HomeWork8.dll
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\bin\Debug\net6.0\HomeWork8.pdb
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\HomeWork8.csproj.AssemblyReference.cache
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\HomeWork8.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\HomeWork8.AssemblyInfoInputs.cache
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\HomeWork8.AssemblyInfo.cs
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\HomeWork8.csproj.CoreCompileInputs.cache
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\HomeWork8.dll
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\refint\HomeWork8.dll
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\HomeWork8.pdb
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\HomeWork8.genruntimeconfig.cache
+E:\C#\SigmaSoftware\HomeWork8\HomeWork8\obj\Debug\net6.0\ref\HomeWork8.dll

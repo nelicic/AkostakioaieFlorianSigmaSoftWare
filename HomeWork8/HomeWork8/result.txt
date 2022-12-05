@@ -3,12 +3,12 @@ table
 13
 We have 0 products of that type. 13 missing products.
 But you can chose adjacent products from that list:
-chair couch sofa armchair 
+chair, couch, sofa, armchair
 
 EKVATOR
 teddybear
 31
 We have 4 products of that type. 27 missing products.
 But you can chose adjacent products from that list:
-trucktoy drum train boat 
+trucktoy, drum, train, boat
 

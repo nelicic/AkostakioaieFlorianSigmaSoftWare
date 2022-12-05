@@ -12,4 +12,5 @@ ConsoleLogger consoleLogger = new ConsoleLogger();
 FileLogger fileLogger = new FileLogger("E:\\C#\\SigmaSoftware\\HomeWork8\\HomeWork8\\");
 
 shop.Notify += consoleLogger.Info;
+shop.Notify += fileLogger.Info;
 shop.GetOrders(orders);

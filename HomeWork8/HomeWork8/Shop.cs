@@ -48,7 +48,7 @@ namespace HomeWork8
         public void ProcessOrder(Order order)
         {
             int missing = 0;
-            foreach (var item in _storage.products)
+            foreach (KeyValuePair<Product, int> item in _storage)
             {
                 if (item.Key.Name == order.ProductName)
                 {

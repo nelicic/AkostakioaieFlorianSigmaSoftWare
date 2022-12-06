@@ -22,6 +22,7 @@ foreach (Product product in products)
 
 
 // Homework 7 (class Storage)
+// об'єднанням складів мав би бути новий склад.
 List<Product> prod = storage1.Union(storage2);
 Console.WriteLine("Union");
 foreach (Product product in prod)

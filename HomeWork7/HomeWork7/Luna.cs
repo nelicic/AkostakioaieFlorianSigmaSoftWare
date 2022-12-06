@@ -17,7 +17,7 @@
 
             if (str.StartsWith("4") && (str.Length == 16 || str.Length == 13))
                 type = "Visa";
-
+//"є ще багато символів, які не можуть входити в номер)
             if (str.Contains(" ") || str.Contains("-"))
                 type = "Invalid";
 
@@ -27,7 +27,7 @@
         public bool IsValid()
         {
             var nums = strNumber.Select(x => int.Parse(x.ToString())).ToList();
-
+//алгоритмічно не правильно 
             bool flag = false;
             for (int i = nums.Count - 1; i >= 0; i--)
             {

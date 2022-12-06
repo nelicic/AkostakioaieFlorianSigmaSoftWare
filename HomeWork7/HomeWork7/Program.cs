@@ -2,7 +2,7 @@
 using System.Globalization;
 
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
-
+// Використовуйте неіменовані змінні. Швидку ініціалізацію.
 Meat prod1 = new Meat("Mutton", 200, 1500, Quality.LowQuality, MeatType.Mutton);
 Meat prod2 = new Meat("Mutton", 300, 1200, Quality.HighQuality, MeatType.Mutton);
 DairyProduct prod3 = new DairyProduct("Milk", 30, 500, new DateOnly(2022, 11, 8));

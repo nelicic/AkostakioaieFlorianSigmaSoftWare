@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\C#\\SigmaSoftware\\HomeWork9\\HomeWork9\\HomeWork9.csproj": {}
+  },
+  "projects": {
+    "E:\\C#\\SigmaSoftware\\HomeWork9\\HomeWork9\\HomeWork9.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\C#\\SigmaSoftware\\HomeWork9\\HomeWork9\\HomeWork9.csproj",
+        "projectName": "HomeWork9",
+        "projectPath": "E:\\C#\\SigmaSoftware\\HomeWork9\\HomeWork9\\HomeWork9.csproj",
+        "packagesPath": "C:\\Users\\Nelik\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\SigmaSoftware\\HomeWork9\\HomeWork9\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nelik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "BenchmarkDotNet": {
+              "target": "Package",
+              "version": "[0.13.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>HomeWork9.BenchMark-20221211-003702</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19045.2251)
+Unknown processor
+.NET SDK=6.0.201
+  [Host]     : .NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+  DefaultJob : .NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>   Method</th><th>Size</th><th>   Mean</th><th>  Error</th><th> StdDev</th><th> Median</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>QuickSortLeft</td><td>100</td><td>70.67 &mu;s</td><td>1.407 &mu;s</td><td>3.850 &mu;s</td><td>70.33 &mu;s</td><td>6.1035</td><td>25608 B</td>
+</tr><tr><td>QuickSortRight</td><td>100</td><td>73.30 &mu;s</td><td>1.458 &mu;s</td><td>4.206 &mu;s</td><td>71.75 &mu;s</td><td>6.1035</td><td>25607 B</td>
+</tr><tr><td>QuickSortRandom</td><td>100</td><td>1,395.83 &mu;s</td><td>31.136 &mu;s</td><td>91.806 &mu;s</td><td>1,389.73 &mu;s</td><td>134.7656</td><td>564658 B</td>
+</tr><tr><td>QuickSortLeft</td><td>1000</td><td>4,903.28 &mu;s</td><td>109.819 &mu;s</td><td>323.802 &mu;s</td><td>4,866.95 &mu;s</td><td>54.6875</td><td>258391 B</td>
+</tr><tr><td>QuickSortRight</td><td>1000</td><td>5,379.17 &mu;s</td><td>130.046 &mu;s</td><td>377.288 &mu;s</td><td>5,367.45 &mu;s</td><td>54.6875</td><td>258410 B</td>
+</tr><tr><td>QuickSortRandom</td><td>1000</td><td>626,202.63 &mu;s</td><td>21,190.844 &mu;s</td><td>62,149.077 &mu;s</td><td>620,434.00 &mu;s</td><td>13000.0000</td><td>57637176 B</td>
+</tr><tr><td>QuickSortLeft</td><td>10000</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>-</td><td>-</td>
+</tr><tr><td>QuickSortRight</td><td>10000</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>-</td><td>-</td>
+</tr><tr><td>QuickSortRandom</td><td>10000</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>-</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>

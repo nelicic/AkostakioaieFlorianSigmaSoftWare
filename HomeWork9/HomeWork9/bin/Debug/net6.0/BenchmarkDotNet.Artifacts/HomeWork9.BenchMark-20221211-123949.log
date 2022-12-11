@@ -1,0 +1,8 @@
+// Validating benchmarks:
+Assembly HomeWork9 which defines benchmarks is non-optimized
+Benchmark was built without optimization enabled (most probably a DEBUG configuration). Please, build it in RELEASE.
+If you want to debug the benchmarks, please see https://benchmarkdotnet.org/articles/guides/troubleshooting.html#debugging-benchmarks.
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 9 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in E:\C#\SigmaSoftware\HomeWork9\HomeWork9\bin\Debug\net6.0\73a134ba-ca12-4bbf-9f67-47f68935c8ea

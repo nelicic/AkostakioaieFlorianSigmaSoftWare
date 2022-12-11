@@ -66,16 +66,9 @@
                     newArray = Array.ConvertAll(line.Trim().Split(" "), x => int.Parse(x));
                 }
 
-                using (StreamWriter fw = new(_path + minFileIndex + ".txt", false))
-                {
-                    for (int i = 1; i < newArray.Length; i++) 
-                        fw.Write(newArray[i] + " ");
-                }
+                WriteArray(minFileIndex, newArray);
 
-                using (StreamWriter fw = new(_path + "result" + ".txt", true))
-                {
-                    fw.Write(min + " ");
-                }
+                AppendResult(min);
             }
 
             Clean();
@@ -85,6 +78,19 @@
         {
             for (int i = 1; i <= _filesCount; i++)
                 File.Delete(_path + i + ".txt");
+        }
+
+        private void WriteArray(int minFileIndex, int[] newArray)
+        {
+            using StreamWriter fw = new(_path + minFileIndex + ".txt", false);
+            for (int i = 1; i < newArray.Length; i++)
+                fw.Write(newArray[i] + " ");
+        }
+
+        private void AppendResult(int min)
+        {
+            using StreamWriter fw = new(_path + "result" + ".txt", true);
+            fw.Write(min + " ");
         }
     }
 }

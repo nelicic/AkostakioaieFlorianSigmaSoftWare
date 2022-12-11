@@ -10,4 +10,4 @@ fileSort.Sort("data.txt");
 // quickSort я перевіряв через BenchmarkDotNet
 // прийшлось і в ньому розбиратись
 // (дивіться скрін)
-var result = BenchmarkRunner.Run<BenchMark>(new DebugConfig());
+//var result = BenchmarkRunner.Run<BenchMark>(new DebugConfig());

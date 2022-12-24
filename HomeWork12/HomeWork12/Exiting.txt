@@ -1,0 +1,68 @@
+User Exiting at cash register 1
+Donald 29 Low 00:10:00 x = 5,24 y = 15,13
+That occurs at 25.12.2022 01:46:40
+
+User Exiting at cash register 3
+James 76 Low 00:20:00 x = 91,48 y = 81,91
+That occurs at 25.12.2022 01:46:40
+
+User Exiting at cash register 2
+Kenneth 19 Low 00:50:00 x = 81,4 y = 23,14
+That occurs at 25.12.2022 01:46:40
+
+User Exiting at cash register 4
+Michael 50 Low 00:50:00 x = 2,43 y = 4,35
+That occurs at 25.12.2022 01:46:40
+
+User Exiting at cash register 1
+Charles 28 Low 00:50:00 x = 3,44 y = 96,07
+That occurs at 25.12.2022 01:46:41
+
+User Exiting at cash register 2
+Matthew 36 Low 00:50:00 x = 70,53 y = 1
+That occurs at 25.12.2022 01:46:41
+
+User Exiting at cash register 3
+Richard 47 Low 01:00:00 x = 51,88 y = 87,06
+That occurs at 25.12.2022 01:46:42
+
+User Exiting at cash register 1
+Joseph 35 Medium 00:20:00 x = 52,8 y = 3,6
+That occurs at 25.12.2022 01:46:42
+
+User Exiting at cash register 3
+Christopher 77 Medium 00:20:00 x = 79,43 y = 34,39
+That occurs at 25.12.2022 01:46:42
+
+User Exiting at cash register 3
+David 24 Medium 00:10:00 x = 38,92 y = 65,76
+That occurs at 25.12.2022 01:46:42
+
+User Exiting at cash register 2
+Anthony 39 Medium 00:50:00 x = 66,14 y = 46,09
+That occurs at 25.12.2022 01:46:42
+
+User Exiting at cash register 3
+Mark 18 High 00:10:00 x = 59,7 y = 97,18
+That occurs at 25.12.2022 01:46:42
+
+User Exiting at cash register 1
+Andrew 59 Medium 00:50:00 x = 2,81 y = 2,14
+That occurs at 25.12.2022 01:46:43
+
+User Exiting at cash register 2
+Robert 26 High 00:40:00 x = 2,99 y = 29,91
+That occurs at 25.12.2022 01:46:43
+
+User Exiting at cash register 1
+John 23 Medium 00:30:00 x = 18,4 y = 73,39
+That occurs at 25.12.2022 01:46:43
+
+User Exiting at cash register 3
+Paul 43 High 00:50:00 x = 61,06 y = 49,33
+That occurs at 25.12.2022 01:46:43
+
+User Exiting at cash register 2
+William 51 High 01:00:00 x = 34,37 y = 27,19
+That occurs at 25.12.2022 01:46:44
+

@@ -13,12 +13,12 @@
             _name = name;
             _age = age;
             _point = point;
-            _status = status == 3 ? (Status)status : status == 2 ? (Status)status : Status.Low; ;
+            _status = status == 3 ? (Status)status : status == 2 ? (Status)status : Status.Low;
             Time = time;
         }
 
         public Point GetPosition() => _point;
-        public int GetPriority() => (int)_status + (Time < new TimeSpan(0, 30, 0) ? 0 : 1);
+        public int GetPriority() => (int)_status + (Time < new TimeSpan(0, (int)Time.TotalMinutes, 0) ? 0 : 1);
 
         public override string ToString()
         {

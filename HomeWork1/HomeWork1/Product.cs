@@ -2,7 +2,7 @@
 {
     public class Product : IComparable
     {
-        private string name = string.Empty;
+        public string Name { get; set; }
         private double weight;
         public double Price { get; set; }
         public double Weight 
@@ -16,7 +16,7 @@
 
         public Product(string name, double price, double weight)
         {
-            this.name = name;
+            Name = name;
             this.weight = weight;
             Price = price;
         }
@@ -29,12 +29,12 @@
 
         public override string ToString()
         {
-            return $"Name: {name}\nWeight: {weight}\nPrice: {Price}\n";
+            return $"Name: {Name}\tWeight: {weight}\tPrice: {Price}";
         }
 
         public override int GetHashCode()
         {
-            return (name, weight, Price).GetHashCode();
+            return (Name, weight, Price).GetHashCode();
         }
 
         public override bool Equals(object? obj)
@@ -43,7 +43,7 @@
             if (item == null)
                 return false;
 
-            return (name == item.name && 
+            return (Name == item.Name && 
                 weight == item.weight && 
                 Price == item.Price);
         }

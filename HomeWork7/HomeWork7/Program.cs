@@ -14,30 +14,26 @@ Storage storage2 = new Storage();
 storage2.Add(prod4);
 storage2.Add(prod1);
 
-// generic GetProductsByType 
+/*// generic GetProductsByType 
 List<Product> products = storage1.GetProductsByType<Meat>();
 foreach (Product product in products)
-    Console.WriteLine(product + "\n");
+    Console.WriteLine(product + "\n");*/
 
 
 
 // Homework 7 (class Storage)
 // об'єднанням складів мав би бути новий склад.
-List<Product> prod = storage1.Union(storage2);
+Storage storage = storage1.Union(storage2);
 Console.WriteLine("Union");
-foreach (Product product in prod)
-    Console.WriteLine(product + "\n");
-Console.WriteLine();
-prod = storage1.Except(storage2);
-Console.WriteLine("Except");
-foreach (Product product in prod)
-    Console.WriteLine(product + "\n");
-Console.WriteLine();
-prod = storage1.Intersect(storage2);
-Console.WriteLine("Intersect");
-foreach (Product product in prod)
-    Console.WriteLine(product + "\n");
+Console.WriteLine(storage + "\n");
 
+storage = storage1.Except(storage2);
+Console.WriteLine("Except");
+Console.WriteLine(storage + "\n");
+
+storage = storage1.Intersect(storage2);
+Console.WriteLine("Intersect");
+Console.WriteLine(storage + "\n");
 
 
 
@@ -55,9 +51,19 @@ card_number = "5555555555554444";
 Luna luna2 = new Luna(card_number);
 Console.WriteLine(luna2);
 
+card_number = "5555555555554445";
+Luna luna4 = new Luna(card_number);
+Console.WriteLine(luna4);
+
 // Visa
 card_number = "4222222222222";
-
 Luna luna3 = new Luna(card_number);
 Console.WriteLine(luna3);
 
+card_number = "5105105105105100";
+Luna luna5 = new Luna(card_number);
+Console.WriteLine(luna5); 
+
+card_number = "4012888888881881";
+Luna luna6 = new Luna(card_number);
+Console.WriteLine(luna6);

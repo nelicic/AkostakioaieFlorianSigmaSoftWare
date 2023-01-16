@@ -2,24 +2,41 @@
 {
     public class Luna
     {
-        private string type;
+        private string type = string.Empty;
         private string strNumber;
+
+        string[] forbidenSymbols =
+        {
+            "`", "[", "]", ";", "'", ",",
+            "/", ".", "<", ">", "{", "}",
+            ":", "?", "!", "@", "#", "$",
+            "_", " ", "+", "-", "*", "&"
+        };
+        string[] americanExpress = { "34", "37" };
+        string[] masterCard = { "51", "52", "53", "54", "55" };
+        string[] visa = { "4" };
 
         public Luna(string str)
         {
-            if (str.StartsWith("34") || str.StartsWith("37") && str.Length == 15)
-                type = "American Express";
+            foreach (var item in americanExpress)
+                if (str.StartsWith(item))
+                    if (str.Length == 15)
+                        type = "American Express";
 
-            if (str.StartsWith("51") || str.StartsWith("51")
-                || str.StartsWith("53") || str.StartsWith("54")
-                || str.StartsWith("55") && str.Length == 16)
-                type = "MasterCard";
+            foreach (var item in masterCard)
+                if (str.StartsWith(item))
+                    if (str.Length == 16)
+                        type = "MasterCard";
+            
+            foreach (var item in visa)
+                if (str.StartsWith(item))
+                    if (str.Length == 16 || str.Length == 13)
+                        type = "Visa";
 
-            if (str.StartsWith("4") && (str.Length == 16 || str.Length == 13))
-                type = "Visa";
-//"є ще багато символів, які не можуть входити в номер)
-            if (str.Contains(" ") || str.Contains("-"))
-                type = "Invalid";
+            //"є ще багато символів, які не можуть входити в номер)
+            foreach (var item in forbidenSymbols)
+                if (str.Contains(item))
+                    type = "Invalid";
 
             strNumber = str;
         }
@@ -27,7 +44,7 @@
         public bool IsValid()
         {
             var nums = strNumber.Select(x => int.Parse(x.ToString())).ToList();
-//алгоритмічно не правильно 
+            //алгоритмічно не правильно 
             bool flag = false;
             for (int i = nums.Count - 1; i >= 0; i--)
             {

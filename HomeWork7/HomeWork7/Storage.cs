@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    public class Storage
+    public class Storage 
     {
         private List<Product> products;
         public Storage(List<Product> _products) => products = _products;
@@ -68,11 +68,11 @@
             return prods;
         }
         // HomeWork 7
-        public List<Product> Except(Storage storage)
-            => products.Except(storage.products).ToList();
-        public List<Product> Intersect(Storage storage)
-            => products.Intersect(storage.products).ToList();
-        public List<Product> Union(Storage storage)
-            => products.Union(storage.products).ToList();
+        public Storage Except(Storage storage)
+            => new Storage(products.Except(storage.products).ToList());
+        public Storage Intersect(Storage storage)
+            => new Storage(products.Intersect(storage.products).ToList());
+        public Storage Union(Storage storage)
+            => new Storage(products.Union(storage.products).ToList());
     }
 }
